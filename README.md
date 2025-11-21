@@ -2,24 +2,45 @@
  
 
 Overview:
-This is a Automated Backup System that creates secure and verified backups of your important folders to store. It compresses data, verifies integrity using checksums, and automatically deletes old backups to save disk space.
+
+This is a Automated Backup System that creates secure and verified backups of your important folders to store. It compresses
+
+data, verifies integrity using checksums, and automatically deletes old backups to save disk space.
+
 Features:
+
 -> Create compressed backups likewise tar.gz zip file.
+
 -> Generate & verify checksums for integrity
+
 -> Auto-delete old backups like daily,weekly,monthly.
+
 -> Configurable exclusions via config file.
+
 -> Detailed logging for every operation.
+
 -> Dry run mode to test without changes.
+
 -> Lock file system to prevent duplicate runs.
+
 Project Structure:
+
 backup-system/
+
 ├── backup.sh
+
 ├── backup.config
+
 |── README.md
+
 |── backups/
+
 ├── backup-2025-11-06-1437.tar.gz
+
 ├── backup-2025-11-06-1437.tar.gz.sha256
+
 └── backup.log
+
 Backup.config File:
 BACKUP_DESTINATION=./backups
 EXCLUDE_PATTERNS=".git,node_modules,.cache"
